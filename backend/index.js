@@ -11,7 +11,6 @@ import 'dotenv/config';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import cookieParser from 'cookie-parser';
-import crypto from 'crypto';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -42,12 +41,6 @@ app.use(helmet({
   hidePoweredBy: true 
 }));
 
-/* app.use(helmet.hsts({
-  maxAge: process.env.NODE_ENV === 'production' ? 31536000 : 0,
-  includeSubDomains: true,
-  preload: false,
-})) */
-
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
     ? process.env.FRONTEND_URL || false  
@@ -66,11 +59,10 @@ app.use(session({
   saveUninitialized: false,
   name: 'northbridge.sid',
   cookie: {
-    secure: false, // В development будет false
+    secure: false, 
     httpOnly: true, 
-    sameSite: 'lax', // В development будет lax
+    sameSite: 'lax',
     maxAge: 24 * 60 * 60 * 1000,
-    // domain не устанавливается в development
   }
 }));
 
