@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Autautgrotesk';
+    src: url('https://fonts.cdnfonts.com/css/autaut-grotesk') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --dark-blue: #223440;
+    --navy: #050912;
+    --beige: #EACBAE;
+    --brown: #291B1B;
+    --light-gray: #D5D0CC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Autautgrotesk', 'Segoe UI', Tahoma, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    background-color: var(--navy);
+    color: var(--light-gray);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3.5rem;
+    color: var(--beige);
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--beige), transparent);
+    margin: 0.8rem auto 0;
+}
+
+footer {
+    color: var(--light-gray);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(213, 208, 204, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+    color: var(--beige);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--beige);
+}
+
+footer h3 {
+    color: var(--beige);
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    margin-right: 20px; 
+    color: #333; 
+    text-decoration: none;
+}
+
+.social-links i.fab {
+    font-size: 32px; 
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover i.fab {
+    color: #ccc; 
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    display: flex;         
+    align-items: center;  
+    gap: 12px;             
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.logo img {
+    height: 40px;          
+}
+
+.logo-text {
+    color: var(--beige);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.logo:hover {
+    transform: scale(1.03);
+}
