@@ -29,22 +29,20 @@ app.use(helmet({
       connectSrc: ["'self'", "https://ipapi.co", "https://ip-api.com"],
     }
   },
-    frameguard: { 
-    action: 'deny' 
+    frameguard: {
+    action: 'deny'
   },
-  referrerPolicy: { 
-    policy: 'strict-origin-when-cross-origin' 
+  referrerPolicy: {
+    policy: 'strict-origin-when-cross-origin'
   },
 
-  noSniff: true, 
-  xssFilter: true, 
-  hidePoweredBy: true 
+  noSniff: true,
+  xssFilter: true,
+  hidePoweredBy: true
 }));
 
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? process.env.FRONTEND_URL || false  
-    : true, 
+  origin: process.env.FRONTEND_URL || '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -53,16 +51,22 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
+if (process.env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1);
+}
+
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   name: 'northbridge.sid',
+  proxy: true,
   cookie: {
-    secure: false, 
-    httpOnly: true, 
+    secure: process.env.NODE_ENV === 'production',
+    httpOnly: true,
     sameSite: 'lax',
     maxAge: 24 * 60 * 60 * 1000,
+    domain: process.env.NODE_ENV === 'production' ? process.env.COOKIE_DOMAIN : undefined
   }
 }));
 
@@ -88,14 +92,10 @@ const apiLimiter = rateLimit({
 
 app.use('/api', apiLimiter);
 
-if (process.env.NODE_ENV === 'production') {
-  app.set('trust proxy', 1);
-}
-
 app.use(express.static(path.join(__dirname, '../frontend'), {
   maxAge: process.env.NODE_ENV === 'production' ? '1d' : 0,
-  etag: true, 
-  lastModified: true 
+  etag: true,
+  lastModified: true
 }));
 
 // Route handlers
@@ -124,9 +124,8 @@ app.post("/admin-login",
   }
 );
 
-app.post('/admin-logout', checkSession, (req, res) => {
-  logoutAdmin(req, res);
-});
+app.get('/admin-logout', checkSession, logoutAdmin);
+app.post('/admin-logout', checkSession, logoutAdmin);
 
 app.get('/admin', checkSession, (req, res) => {
   exportToHTML(req, res);
@@ -163,9 +162,9 @@ app.use((err, req, res, next) => {
     ip: req.ip,
     timestamp: new Date().toISOString()
   });
-  
-  res.status(500).json({ 
-    success: false, 
+
+  res.status(500).json({
+    success: false,
     message: 'Internal Server Error',
     ...(process.env.NODE_ENV === 'development' && { error: err.message })
   });

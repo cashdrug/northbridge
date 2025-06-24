@@ -15,7 +15,7 @@ export async function authenticateAdmin(req, res, next) {
 
   try {
     const isMatch = await bcrypt.compare(password, hashedPassword);
-    
+
     if (isMatch) {
       req.session.regenerate((err) => {
         if (err) {
@@ -27,16 +27,16 @@ export async function authenticateAdmin(req, res, next) {
       });
     } else {
       console.log(`Неудачная попытка входа с IP: ${req.ip}`);
-      return res.status(401).json({ 
-        success: false, 
-        message: 'Неверный пароль' 
+      return res.status(401).json({
+        success: false,
+        message: 'Неверный пароль'
       });
     }
   } catch (err) {
     console.error('Ошибка при проверке пароля:', err);
-    return res.status(500).json({ 
-      success: false, 
-      message: 'Ошибка аутентификации' 
+    return res.status(500).json({
+      success: false,
+      message: 'Ошибка аутентификации'
     });
   }
 }
@@ -59,6 +59,6 @@ export function checkSession(req, res, next) {
   if (req.session?.adminAuthenticated) {
     return next();
   }
-  
-  return res.redirect('/admin-login'); 
+
+  return res.redirect('/admin-login');
 }
