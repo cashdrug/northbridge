@@ -43,18 +43,29 @@
 /* MOBILE FIXES for NorthBridge */
 
 @media (max-width: 768px) {
-  /* Logo text stacking */
-  .logo {
-    flex-direction: column;
-    align-items: center;
+
+      .logo {
+    flex-direction: row !important;
+    align-items: center !important;
     left: 10px;
+    gap: 8px;
   }
   .logo-text {
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
+    white-space: nowrap;
   }
 
-  /* HOW IT WORKS section */
+
+  .about-columns {
+    flex-direction: column !important;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .about-column {
+    width: 100%;
+  }
+
   .how-it-works {
     height: auto;
     padding: 3rem 1rem;
@@ -107,6 +118,35 @@
     height: 40px;
     background: linear-gradient(to top, rgba(5, 9, 18, 0), var(--navy));
   }
+    .hero {
+        background-size: 350% auto !important;
+        background-position: center top !important;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        min-height: 70vh !important;
+        padding-top: 120px !important;
+        padding-bottom: 10px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background-blend-mode: normal !important;
+        filter: brightness(1) !important;
+        display: flex;
+    }
+    
+    .cta-buttons {
+        margin-bottom: 2rem !important;
+        justify-content: center !important;
+        display: flex !important;
+        position: relative !important;
+        top: auto !important;
+    }
+    
+    .cta-primary {
+        padding: 10px 20px !important; 
+        font-size: 0.9rem;
+        width: auto !important; 
+        max-width: none !important;
+    }
 }
 
 @media (max-width: 480px) {
