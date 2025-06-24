@@ -14,7 +14,7 @@ router.post(
     body('role')
       .trim()
       .notEmpty().withMessage('Role is required')
-      .isIn(['Investor', 'Entrepreneur', 'Startup']).withMessage('Invalid role'),
+      .isIn(['Investor', 'investor', 'Entrepreneur', 'entrepreneur', 'Startup', 'startup']).withMessage('Invalid role'),
     body('email')
       .trim()
       .isEmail().withMessage('Valid email is required')
