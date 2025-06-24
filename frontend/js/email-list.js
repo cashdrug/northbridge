@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const validRoles = ['Investor', 'Entrepreneur', 'Startup'];
+  const validRoles = ['Investor', 'investor', 'Entrepreneur', 'entrepreneur', 'Startup', 'startup'];
   
   $('#join-mail-list-btn, #sign-in-btn').click(function () {
     $('html, body').animate({
