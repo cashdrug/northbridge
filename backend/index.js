@@ -25,7 +25,7 @@ app.use(helmet({
       defaultSrc: ["'self'"],
       scriptSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com"],
-      imgSrc: ["'self'", "data:", "/api/placeholder"],
+      imgSrc: ["'self'", "data:"],
       connectSrc: ["'self'", "https://ipapi.co", "https://ip-api.com"],
     }
   },
@@ -93,7 +93,7 @@ const apiLimiter = rateLimit({
 app.use('/api', apiLimiter);
 
 app.use(express.static(path.join(__dirname, '../frontend'), {
-  maxAge: process.env.NODE_ENV === 'production' ? '1d' : 0,
+  maxAge: process.env.NODE_ENV === 'production' ? '1h' : 0,
   etag: true,
   lastModified: true
 }));
