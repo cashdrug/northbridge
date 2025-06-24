@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
 
-      .logo {
+.logo {
     flex-direction: row !important;
     align-items: center !important;
     left: 10px;
@@ -118,35 +118,54 @@
     height: 40px;
     background: linear-gradient(to top, rgba(5, 9, 18, 0), var(--navy));
   }
-.hero {
-    background-image: url('../images/IMG_NCmain5.webp');
-    background-size: 350% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    min-height: 70vh;
-    padding-top: 120px;
-    padding-bottom: 10px;
-    justify-content: center !important;
-    align-items: center !important;
-    filter: none !important;
-    display: flex;
-}
+    .hero {
+        background-size: 350% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        min-height: 70vh;
+        padding-top: 120px;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        filter: none;
+        display: flex;
+    }
 
-.cta-buttons {
-    margin-bottom: 2rem !important;
-    justify-content: center !important;
-    display: flex !important;
-    position: relative !important;
-    top: auto !important;
-}
+    .cta-buttons {
+        margin-bottom: 2rem;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        top: auto;
+    }
 
-.cta-primary {
-    padding: 10px 20px !important; 
-    font-size: 0.9rem;
-    width: auto !important; 
-    max-width: none !important;
-}
+    .cta-primary {
+        padding: 10px 20px; 
+        font-size: 0.9rem;
+        width: auto ;
+        max-width: 90%;
+        display: inline-block;
+        align-self: center;
+    }
+      .email-list-container,
+  #mail-list-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  #mail-list-form .form-group {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  #mail-list-form input,
+  #mail-list-form select {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width: 480px) {
@@ -164,5 +183,9 @@
   }
   .testimonial-card {
     padding: 1rem;
+  }
+  .cta-primary {
+    font-size: 0.85rem;
+    padding: 8px 16px;
   }
 }
