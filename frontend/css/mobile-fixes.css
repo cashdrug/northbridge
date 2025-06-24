@@ -118,34 +118,35 @@
     height: 40px;
     background: linear-gradient(to top, rgba(5, 9, 18, 0), var(--navy));
   }
-    .hero {
-        background-size: 350% auto !important;
-        background-position: center top !important;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        min-height: 70vh !important;
-        padding-top: 120px !important;
-        padding-bottom: 10px !important;
-        justify-content: center !important;
-        align-items: center !important;
-        filter: brightness(1) !important;
-        display: flex;
-    }
-    
-    .cta-buttons {
-        margin-bottom: 2rem !important;
-        justify-content: center !important;
-        display: flex !important;
-        position: relative !important;
-        top: auto !important;
-    }
-    
-    .cta-primary {
-        padding: 10px 20px !important; 
-        font-size: 0.9rem;
-        width: auto !important; 
-        max-width: none !important;
-    }
+.hero {
+    background-image: url('../images/IMG_NCmain5.webp');
+    background-size: 350% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 70vh;
+    padding-top: 120px;
+    padding-bottom: 10px;
+    justify-content: center !important;
+    align-items: center !important;
+    filter: none !important;
+    display: flex;
+}
+
+.cta-buttons {
+    margin-bottom: 2rem !important;
+    justify-content: center !important;
+    display: flex !important;
+    position: relative !important;
+    top: auto !important;
+}
+
+.cta-primary {
+    padding: 10px 20px !important; 
+    font-size: 0.9rem;
+    width: auto !important; 
+    max-width: none !important;
+}
 }
 
 @media (max-width: 480px) {
