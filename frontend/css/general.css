@@ -109,7 +109,7 @@ footer h3 {
 }
 
 .social-links i.fab {
-    font-size: clamp(24px, 5vw, 32px);
+    font-size: 40px;
     transition: color 0.3s ease;
 }
 
