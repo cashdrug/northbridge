@@ -1,0 +1,173 @@
+
+@media (max-width: 1200px) {
+    .feature-cards {max-width: 900px; gap: 25px;}
+    .feature-card {width: 280px;}
+    .carousel {max-width: 900px;}
+    .about-content {max-width: 900px;}
+}
+
+@media (max-width: 992px) {
+    .prev-arrow {left: 20px;}
+    .next-arrow {right: 20px;}
+    
+    .carousel-arrow {width: 50px;height: 50px;}
+    .carousel {max-width: 600px; }
+
+    .feature-cards {max-width: 700px;gap: 20px;}
+    
+    .feature-card {width: 320px;}
+    
+    .hero h1 {font-size: 2.2rem;}
+    
+    .section-title {font-size: 2.4rem;}
+    
+    .steps {max-width: 700px;}
+    
+    .testimonial-cards {max-width: 700px;}
+    
+    .testimonial-card {width: 320px;}
+    
+    .about-columns {gap: 20px;}
+    
+    .about-stats {gap: 40px;}
+
+    .about-tagline {max-width: 100%; font-size: 1.3rem;}
+    
+    .stat-number {font-size: 3rem;}
+    
+    .email-list-container {max-width: 500px;}
+    
+    .team-info-title-3 {max-width: 650px;}
+}
+
+@media (max-width: 768px) {
+    .feature-cards, .testimonial-cards, .team-cards {flex-direction: column; align-items: center;}
+
+    .footer-content {flex-direction: column; gap: 30px; align-items: center; text-align: center;}
+    .prev-arrow { left: 10px; }
+    .next-arrow { right: 10px; }
+    .team {padding: 3rem 1rem;}
+    
+    .carousel {max-width: 300px; padding: 15px;}
+    
+    .team-card {width: 240px;}
+    
+    .carousel-arrow {width: 40px;height: 40px;font-size: 18px;}
+    .section-title {font-size: 2.2rem;}
+
+    .step:not(:last-child)::after {display: none;}
+    .feature-cards {gap: 30px;}
+    .feature-card {width: 90%;max-width: 400px;}
+    
+    .hero {min-height: 80vh;}
+    
+    .hero h1 {font-size: 2rem;padding: 0 15px;}
+    
+    .cta-buttons {flex-direction: column; align-items: center; gap: 15px;}
+    
+    .section-title {font-size: 2.2rem;}
+    
+    .steps {gap: 25px; padding: 20px;}
+    
+    .step {flex-direction: column; align-items: flex-start; text-align: left; gap: 15px;}
+    
+    .step-number {width: 50px;height: 50px;font-size: 1.3rem;}
+    
+    .step-content h3 {font-size: 1.4rem;}
+    
+    .testimonial-card {width: 90%;max-width: 400px;}
+    
+    .about-columns {flex-direction: column;}
+    
+    .about-heading h2 {font-size: 2.2rem;}
+    .about-tagline {font-size: 1.2rem;max-width: 90%;}
+    .about-stats {flex-wrap: wrap;gap: 20px;}
+    .team {padding: 3rem 1rem;}
+    .carousel {max-width: 400px;padding: 15px;}
+    .carousel-arrow {width: 40px;height: 40px;font-size: 18px;}
+    .team-card {width: 260px;margin: 0 5px;}
+    .team-card img {height: 300px;}
+    .email-list-container {max-width: 90%;}
+    .form-group input {padding: 12px 14px;}
+    
+    .animated-letters-container {height: 150px;}
+    
+    .letter {width: 80px;}
+    .letter-n {left: calc(50% - 130px);}
+    .letter-b {left: calc(50% - 40px);}
+    .letter-c {left: calc(50% + 50px);}
+    .faq-topic {max-width: 90%;}
+}
+
+
+@media (max-width: 576px) {
+    .hero h1 {font-size: 1.8rem;}
+    
+    .cta-primary, .cta-secondary {width: 80%; max-width: 300px;}
+    
+    .section-title {font-size: 2rem;}
+    
+    .feature-card {width: 95%;}
+    
+    .feature-icon {width: 70px; height: 70px; font-size: 1.8rem;}
+    
+    .step-content h3 {font-size: 1.3rem;}
+    
+    .testimonial-card {width: 95%; padding: 1.5rem;}
+    
+    .author-avatar {width: 40px;height: 40px;}
+    
+    .about-heading h2 {font-size: 2rem;}
+    
+    .about-tagline {font-size: 1.1rem;max-width: 95%;}
+    
+    .stat-number {font-size: 2.5rem;}
+    
+    .stat-label {font-size: 0.9rem;}
+    
+    .carousel {max-width: 300px; padding: 10px;}
+    
+    .team-card {width: 230px;}
+    
+    .team-card img {height: 250px;}
+    
+    .team-info h3 {font-size: 1.2rem;}
+    
+    .team-info p {font-size: 1rem;}
+    
+    .email-list-container {padding: 1.5rem;}
+    
+    .form-group label {font-size: 1rem;}
+    
+    .animated-letters-container {height: 120px;}
+    
+    .letter {width: 60px;}
+    .letter-n {left: calc(50% - 90px);}
+    .letter-b {left: calc(50% - 30px);}
+    .letter-c {left: calc(50% + 35px);}
+    
+    .topic-header h2 {font-size: 1.1rem;}
+    
+    .faq-question {padding: 1rem;font-size: 0.9rem;}
+    
+    .faq-answer {font-size: 0.9rem;}
+}
+
+/* Small Mobile Layout */
+@media (max-width: 375px) {
+    .hero h1 {font-size: 1.6rem;}
+    
+    .section-title {font-size: 1.8rem;}
+    
+    .carousel {max-width: 250px;}
+    
+    .team-card {width: 200px;}
+    .team-card img {height: 220px;}
+
+    .animated-letters-container {height: 100px;}
+    
+    .letter {width: 50px;}
+    .letter-n {left: calc(50% - 75px);}
+    .letter-b {left: calc(50% - 25px);}
+    .letter-c {left: calc(50% + 30px);}
+}
