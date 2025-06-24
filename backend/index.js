@@ -93,7 +93,6 @@ const apiLimiter = rateLimit({
 app.use('/api', apiLimiter);
 
 app.use(express.static(path.join(__dirname, '../frontend'), {
-  maxAge: process.env.NODE_ENV === 'production' ? '1h' : 0,
   etag: true,
   lastModified: true
 }));
