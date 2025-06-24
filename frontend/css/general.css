@@ -33,7 +33,7 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     margin-bottom: 3.5rem;
     color: var(--beige);
     position: relative;
@@ -63,12 +63,13 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 .footer-logo {
     margin-bottom: 1rem;
     color: var(--beige);
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: bold;
 }
 
@@ -98,22 +99,22 @@ footer h3 {
     padding-top: 1rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     color: #777;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .social-links a {
-    margin-right: 20px; 
-    color: #333; 
+    margin-right: 20px;
+    color: #333;
     text-decoration: none;
 }
 
 .social-links i.fab {
-    font-size: 32px; 
+    font-size: clamp(24px, 5vw, 32px);
     transition: color 0.3s ease;
 }
 
 .social-links a:hover i.fab {
-    color: #ccc; 
+    color: #ccc;
 }
 .logo {
     position: absolute;
