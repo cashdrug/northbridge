@@ -88,12 +88,6 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .logo {
-        top: 15px;
-        left: 15px;
-        gap: 8px;
-    }
-    
     .privacy-container {
         margin: 80px 15px 30px;
         padding: 25px 20px;
@@ -118,14 +112,13 @@ body::before {
         margin-bottom: 12px;
     }
     
-    /* Footer полная перестройка для мобильных */
     footer {
         padding: 2rem 1rem;
         text-align: center;
     }
     
     .footer-content {
-        display: block; /* Убираем flex */
+        display: block; 
         max-width: none;
         margin: 0;
     }
@@ -198,18 +191,6 @@ body::before {
 
 /* Очень маленькие экраны */
 @media (max-width: 480px) {
-    .logo {
-        top: 10px;
-        left: 10px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
-    
-    .logo-text {
-        font-size: 0.9rem;
-        line-height: 1;
-    }
     
     .privacy-container {
         margin: 70px 10px 20px;
