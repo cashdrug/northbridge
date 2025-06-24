@@ -17,34 +17,6 @@
     justify-content: flex-end;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        background-size: 350% auto !important;
-        background-position: center top !important;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        min-height: 70vh !important;
-        padding-top: 120px !important;
-        padding-bottom: 10px !important;
-        justify-content: center !important;
-        align-items: center !important;
-        background-blend-mode: normal !important;
-        filter: brightness(1) !important;
-        display: flex;
-    }
-    
-    .cta-buttons {
-        margin-bottom: -20rem;
-        justify-content: center;
-    }
-    
-    .cta-primary {
-        padding: 10px 20px !important; 
-        font-size: 0.9rem;
-        width: auto !important; 
-        max-width: none !important;
-    }
-}
 .team {
     padding: 5rem 2rem;
     background-color: var(--dark-blue);
