@@ -2,7 +2,7 @@
     background-color: var(--navy);
     color: var(--light-gray);
     text-align: center;
-    background-image: url('../images/IMG_NCmain5.webp');
+    background-image: url('../images/IMG_NCmain5.webp') !important;
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
