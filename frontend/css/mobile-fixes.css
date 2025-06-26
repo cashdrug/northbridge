@@ -35,7 +35,7 @@
     
     .stat-number {font-size: 3rem;}
     
-    .email-list-container {max-width: 500px;}
+    .email-list-container {max-width: 800px;}
     
     .team-info-title-3 {max-width: 650px;}
 }
@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
 
-.logo {
+  .logo {
     flex-direction: row !important;
     align-items: center !important;
     left: 10px;
@@ -147,26 +147,59 @@
         max-width: 90%;
         display: inline-block;
         align-self: center;
+	margin-bottom: -20rem;
     }
-      .email-list-container,
+      .email-list-section {
+    padding: 3rem 1rem;
+min-height: 390px;
+
+  }
+  
+  .email-list-container {
+    margin: 0;
+    padding: 1.5rem; /* Уменьшили внутренние отступы */
+    border-radius: 8px;
+	min-height: 390px;
+  }
+  
   #mail-list-form {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-
-  #mail-list-form .form-group {
     width: 100%;
-    margin-bottom: 1rem;
+    gap: 20px; /* Уменьшили расстояние между элементами */
   }
 
-  #mail-list-form input,
+    .form-group label {
+    font-size: 1rem; /* Уменьшили размер лейбла */
+    margin-left: 0;
+  }
+
   #mail-list-form select {
     width: 100%;
     box-sizing: border-box;
+    padding-left: 2.5rem;
   }
-}
+  .form-group input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* Добавили место справа для иконки */
+    font-size: 16px; /* Важно! 16px предотвращает зум на iOS */
+    box-sizing: border-box;
+    transform: none; /* Убираем трансформации на мобильных */
+  }
+  
+  .form-group input:focus {
+    transform: none; 
+    box-shadow: 0 0 0 2px rgba(234, 203, 174, 0.3);
+  }
+    .form-group i {
+    top: 36px; /* Уменьшили отступ сверху */
+    right: 12px;
+    pointer-events: none; /* Чтобы иконка не мешала нажатиям */
+  }
+
+    .form-footer {
+    margin-top: 20rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
 
 @media (max-width: 480px) {
   .logo-text {
@@ -187,5 +220,32 @@
   .cta-primary {
     font-size: 0.85rem;
     padding: 8px 16px;
+  }
+  .email-list-container {
+    padding: 1rem;
+  }
+  
+  .form-group input {
+    padding: 10px 35px 10px 10px;
+    font-size: 16px;
+  }
+  
+  .form-group i {
+    top: 34px;
+    right: 10px;
+    font-size: 0.9rem;
+  }
+  
+  #mail-list-form button.cta-primary {
+    padding: 12px 16px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .email-list-section {
+    padding: 2rem 1rem;
+  }
+  
+  .email-list-container {
+    padding: 1.5rem;
   }
 }

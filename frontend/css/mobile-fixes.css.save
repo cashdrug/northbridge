@@ -1,0 +1,172 @@
+
+@media (max-width: 1200px) {
+    .feature-cards {max-width: 900px; gap: 25px;}
+    .feature-card {width: 280px;}
+    .carousel {max-width: 900px;}
+    .about-content {max-width: 900px;}
+}
+
+@media (max-width: 992px) {
+    .prev-arrow {left: 20px;}
+    .next-arrow {right: 20px;}
+    
+    .carousel-arrow {width: 50px;height: 50px;}
+    .carousel {max-width: 600px; }
+
+    .feature-cards {max-width: 700px;gap: 20px;}
+    
+    .feature-card {width: 320px;}
+    
+    .hero h1 {font-size: 2.2rem;}
+    
+    .section-title {font-size: 2.4rem;}
+    
+    .steps {max-width: 700px;}
+    
+    .testimonial-cards {max-width: 700px;}
+    
+    .testimonial-card {width: 320px;}
+    
+    .about-columns {gap: 20px;}
+    
+    .about-stats {gap: 40px;}
+
+    .about-tagline {max-width: 100%; font-size: 1.3rem;}
+    
+    .stat-number {font-size: 3rem;}
+    
+    .email-list-container {max-width: 500px;}
+    
+    .team-info-title-3 {max-width: 650px;}
+}
+
+/* MOBILE FIXES for NorthBridge */
+
+@media (max-width: 768px) {
+
+      .logo {
+    flex-direction: ro;
+    align-items: center !important;
+    left: 10px;
+    gap: 8px;
+  }
+  .logo-text {
+    font-size: 1rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+
+  .about-columns {
+    flex-direction: column !important;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .about-column {
+    width: 100%;
+  }
+
+  .how-it-works {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .steps {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+  }
+  .step-number {
+    margin-bottom: 0;
+    margin-top: 6px;
+  }
+  .step-content h3 {
+    margin-bottom: 8px;
+  }
+
+  /* FEATURES section */
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .feature-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  /* TESTIMONIALS section */
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial-card {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* FORM BUTTON full width */
+  #mail-list-form button.cta-primary {
+    width: 100%;
+  }
+
+  .team-top-blur {
+    height: 40px;
+    background: linear-gradient(to top, rgba(5, 9, 18, 0), var(--navy));
+  }
+.hero {
+    background-image: url('../images/IMG_NCmain5.webp');
+    background-size: 350% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 70vh;
+    padding-top: 120px;
+    padding-bottom: 10px;
+    justify-content: center !important;
+    align-items: center !important;
+    filter: none !important;
+    display: flex;
+}
+
+.cta-buttons {
+    margin-bottom: 2rem !important;
+    justify-content: center !important;
+    display: flex !important;
+    position: relative !important;
+    top: auto !important;
+}
+
+.cta-primary {
+    padding: 10px 20px; 
+    font-size: 0.9rem;
+margin-bottom: -20rem;
+width: auto;
+}
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 0.9rem;
+  }
+  .step-content h3 {
+    font-size: 1.2rem;
+  }
+  .step-content p {
+    font-size: 0.95rem;
+  }
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+  .testimonial-card {
+    padding: 1rem;
+  }
+  .cta-primary {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
